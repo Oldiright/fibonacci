@@ -7,7 +7,8 @@ public class Fibonacci {
     private static Map<Integer, Long> MEMO = new HashMap<>();
 
 
-    // просторова складність методу fibonacciIterative() -> O(n)
+    // часова складність методу fibonacciIterative() -> O(n)
+    // просторова складність методу fibonacciDynamic() -> O(1)
     public long fibonacciIterative(int n) throws IllegalArgumentException {
 
         long[] numbers = new long[]{0, 1};
@@ -31,7 +32,8 @@ public class Fibonacci {
         return numbers[n];
     }
 
-    // просторова складність методу fibonacciRecursion() -> O(2^n)
+    // часова складність методу fibonacciRecursion() -> O(2^n)
+    // просторова складність методу fibonacciDynamic() -> O(n)
     public long fibonacciRecursion(int n) throws IllegalArgumentException {
 
         if(n < 0) {
@@ -43,6 +45,7 @@ public class Fibonacci {
         return fibonacciRecursion(n-1) + fibonacciRecursion(n-2);
 
     }
+    // часова складність методу fibonacciDynamic() -> O(n)
     // просторова складність методу fibonacciDynamic() -> O(n)
     public long fibonacciDynamic(int n) {
         if(n <= 1) {
