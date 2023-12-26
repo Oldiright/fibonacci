@@ -19,17 +19,13 @@ public class Fibonacci {
         if (n == 0) {
             return 0;
         }
-
-        if (n > numbers.length - 1) {
-            long currentNumber;
-            for (int i = 1; i < n; i++) {
-                currentNumber = numbers[0] + numbers[1];
-                numbers[0] = numbers[1];
-                numbers[1] = currentNumber;
-            }
-            return numbers[1];
+        long currentNumber;
+        for (int i = 1; i < n; i++) {
+            currentNumber = numbers[0] + numbers[1];
+            numbers[0] = numbers[1];
+            numbers[1] = currentNumber;
         }
-        return numbers[n];
+        return numbers[1];
     }
 
     // часова складність методу fibonacciRecursion() -> O(2^n)
