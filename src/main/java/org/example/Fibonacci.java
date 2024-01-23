@@ -10,16 +10,14 @@ public class Fibonacci {
     // часова складність методу fibonacciIterative() -> O(n)
     // просторова складність методу fibonacciDynamic() -> O(1)
     public long fibonacciIterative(int n) throws IllegalArgumentException {
-
         long[] numbers = new long[]{0, 1};
-
+        long currentNumber;
         if(n < 0) {
             throw new IllegalArgumentException();
         }
         if (n == 0) {
             return 0;
         }
-        long currentNumber;
         for (int i = 1; i < n; i++) {
             currentNumber = numbers[0] + numbers[1];
             numbers[0] = numbers[1];
